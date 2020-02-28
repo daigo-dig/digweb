@@ -68,7 +68,7 @@ body {
 
 .rightbox {
   width: 680px;
-  border: 2px solid #5C77A1;
+  border: 4px solid #5C77A1;
   margin-bottom: 10px;
 }
 
@@ -88,7 +88,7 @@ body {
 }
 
 .sitemapitem {
-  width: 322px;
+  width: 320px;
   float: left;
   margin: 5px 5px;
 }
@@ -103,7 +103,7 @@ body {
   padding: 0px 4px 4px 4px;
 }
 
-#hometext {
+.hometext {
   padding: 15px;
 }
 
@@ -135,4 +135,73 @@ body {
   background: #5C77A1;
   height: 34px;
   padding: 4px;
+}
+
+#singlesign {
+  font-size: 26px;
+  color: white;
+  width: 680px;
+  background: #5C77A1;
+  height: 34px;
+  padding: 0px 4px 4px 4px;
+  margin-bottom: 5px;
+}
+
+.listContainer {
+  border: 2px solid #5C77A1;
+  color: black;
+}
+
+.listTitle {
+  color: white;
+  font-size: 22px;
+  border: 2px solid #5C77A1;
+  background: #5C77A1;
+  float: left;
+  width: 576px;
+  height: 58px;
+}
+
+.listDate{
+  width: 100px;
+  float: left;
+  text-align: right;
+  background: #5C77A1;
+  color: white;
+  height: 58px;
+}
+
+.listSum {
+  clear: both;
+}
+
+#article {
+  border: 2px solid #5C77A1;
+}
+
+#singletitle {
+  color: white;
+  font-size: 22px;
+  border: 2px solid #5C77A1;
+  background: #5C77A1;
+  float: left;
+  width: 576px;
+  height: 58px;
+}
+
+#singledate {
+  width: 100px;
+  float: left;
+  text-align: right;
+  background: #5C77A1;
+  color: white;
+  height: 58px;
+}
+
+#articleBody {
+  clear: both;
+}
+
+.nounderline {
+	text-decoration: none;
 }

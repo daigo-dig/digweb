@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <div id=singlesign>
+	   {{upper .Section}}
+  </div>
+	<div id=article>
+    <div id=singlehead>
+      <div id=singletitle>
+  		  <h1>{{ .Title }}</h1>
+      </div>
+      <div id=singledate>
+        {{ .PublishDate.Format "2006/01/02"}}
+      </div>
+    </div>
+		<div id=articleBody>
+			{{ .Content }}
+		</div>
+	</div>
+{{ end }}
