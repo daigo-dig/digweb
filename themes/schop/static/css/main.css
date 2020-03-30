@@ -55,6 +55,21 @@ body {
   padding: 4px;
 }
 
+a{
+	color: white;
+	text-decoration: none;
+}
+
+a:hover{
+	width: 170px;
+	color: white;
+	background-color: #7d8bff;
+}
+
+a:active{
+	color: white;
+}
+
 .menuitem {
   font-size: 26px;
   color: white;

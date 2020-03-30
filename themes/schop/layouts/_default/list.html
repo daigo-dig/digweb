@@ -1,24 +1,40 @@
 {{ define "main" }}
-  <div id=singlesign>
-     {{upper .Section}}
-  </div>
-  {{ range $elem := .Data.Pages }}
-    {{with $elem.Summary}}
-    <a class=nounderline href={{$elem.Permalink}}>
-      <div class=list >
-        <div class=listContainer>
-          <div class=listTitle>{{$elem.Title}}</div>
-          <div class=listDate>{{$elem.Date.Format "2006/01/02"}}</div>
-          <div class=listSum>{{$elem.Summary}}</div>
+  {{ if .Params.fixed }}
+    <div id=article>
+      <div id=singlehead>
+        <div id=singletitle>
+          <h1>{{ .Title }}</h1>
+        </div>
+        <div id=singledate>
+          {{ .PublishDate.Format "2006/01/02"}}
         </div>
       </div>
-    </a>
-    {{else}}
+      <div id=articleBody>
+        {{ .Content }}
+      </div>
+    </div>
+  {{else}}
+    <div id=singlesign>
+       {{upper .Section}}
+    </div>
+    {{ range $elem := .Data.Pages }}
+      {{with $elem.Summary}}
       <a class=nounderline href={{$elem.Permalink}}>
-        <div class=smallList>
-          <div class=smallListBody>{{$elem.Title}}</div>
+        <div class=list >
+          <div class=listContainer>
+            <div class=listTitle>{{$elem.Title}}</div>
+            <div class=listDate>{{$elem.Date.Format "2006/01/02"}}</div>
+            <div class=listSum>{{$elem.Summary}}</div>
+          </div>
         </div>
       </a>
-    {{end}}
+      {{else}}
+        <a class=nounderline href={{$elem.Permalink}}>
+          <div class=smallList>
+            <div class=smallListBody>{{$elem.Title}}</div>
+          </div>
+        </a>
+      {{end}}
+    {{ end }}
   {{ end }}
 {{ end }}
