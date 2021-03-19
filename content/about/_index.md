@@ -1,6 +1,6 @@
 ---
 title: "About"
-date: 2020-03-19T21:54:15+09:00
+date: 
 fixed: true
 draft: false
 ---
