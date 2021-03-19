@@ -4,8 +4,8 @@
     Home
   </div>
   <div id=hometext>
-  digの遊ぶ場所！
-  多分色々いじって見れるようにする。ブログもその一貫？で書くかも。わからないけど。ゲームの話もする。ポケモンとかロルとか？本はそんなに今は読めない…そんな感じで掘り下げていく
+  くぬぎの個人的なwebサイトです！
+  多分色々いじって見れるようにする。ブログも書くかも。わからないけど。作曲やゲームの話もする。ポケモンとかLoLとか？本の話もしたいな。
   </div>
 </div>
 <div class=rightbox>
@@ -13,8 +13,12 @@
     Head Line
   </div>
   <div class=hometext>
-  2020/02/27
-  とりあえず作ってみた
+    {{ range first 10 (where .Site.RegularPages.ByDate.Reverse ".Section" "in" $.Site.Params.MainSections) }}
+    <li>
+      <b><a href="{{.RelPermalink}}">{{.Title}}</a></b>
+      <time>{{.Date.Format "2006-01-02"}}</time>
+    </li>
+    {{ end }}
   </div>
 </div>
 <div class=rightbox>
@@ -22,7 +26,7 @@
     About Me
   </div>
   <div class=hometext>
-    Digです
+    くぬぎと言います！プログラミングとか作曲とかしてます。
   </div>
 </div>
 <div class=rightbox>
