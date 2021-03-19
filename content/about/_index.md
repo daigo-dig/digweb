@@ -1,8 +1,9 @@
 ---
 title: "About"
-date: 
-fixed: true
+description: "このサイトについて"
 draft: false
+fixed: true
+subtitle: ""
 ---
 
 このサイトはDigが適当にもの書いたり,
