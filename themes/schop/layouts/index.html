@@ -13,12 +13,7 @@
     Head Line
   </div>
   <div class=hometext>
-    {{ range first 10 (where .Site.RegularPages.ByDate.Reverse ".Section" "in" $.Site.Params.MainSections) }}
-    <li>
-      <b><a href="{{.RelPermalink}}">{{.Title}}</a></b>
-      <time>{{.Date.Format "2006-01-02"}}</time>
-    </li>
-    {{ end }}
+    そういうのが来る
   </div>
 </div>
 <div class=rightbox>
