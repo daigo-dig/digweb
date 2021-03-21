@@ -177,7 +177,11 @@ body {
 #articleTag {
 	padding: 0 10px;
 	background: #8FBACC;
-	color: #323232;
+	color: #FFFFFF;
+}
+
+#articleTag > a:hover {
+	background: #DEDEDE;
 }
 
 #sidenavi {
