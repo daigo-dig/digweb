@@ -1,0 +1,63 @@
+{{ define "main" }}
+<div id=column>
+	<div class="window">
+		<div class="windowTitle">
+			<h2>Home</h2>
+		</div>
+		<div class="windowBody">
+			くぬぎの個人的なwebサイトです！多分色々いじって見れるようにする。
+            ブログも書くかも。わからないけど。作曲やゲームの話もする。
+            ポケモンとかLoLとか？本の話もしたいな。
+		</div>
+	</div>
+    <div class="window">
+        <div class="windowTitle">
+            <h2>About Me</h2>
+        </div>
+        <div class="windowBody">
+            くぬぎです！
+            プログラミングとか作曲とかモデリングとかしてます。
+        </div>
+    </div>
+    <div class="window">
+        <div class="windowTitle">
+            <h2>What's New</h2>
+        </div>
+        <div class="windowBody">
+            <ul>
+                {{ range first 10 (where .Site.RegularPages.ByDate.Reverse ".Section" "in" $.Site.Params.MainSections) }}
+                <li>
+                    <b><a href="{{.RelPermalink}}"><span class=gray>{{.Title}}</span></a></b>
+                    <time>{{.Date.Format "2006-01-02"}}</time>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+    <div class="window">
+        <div class="windowTitle">
+            <h2>Site Map</h2>
+        </div>
+        <div class="windowBody">
+            <h3>Home</h3>
+            ここです
+
+            <h3>About</h3>
+            自己紹介してます
+
+            <h3>Blog</h3>
+            日記やメモをまとめてます
+
+            <h3>Work</h3>
+            作ったものはこちら
+
+            <h3>Link</h3>
+            各種リンクです
+
+            <h3>Contact</h3>
+            連絡先等です
+
+        </div>
+    </div>
+</div>
+{{ end }}

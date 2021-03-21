@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+	<head>
+	{{ partial "head.html" . }}
+	</head>
+	<body ontouchstart="">
+		<div id="wrap">
+			{{- partial "header.html" . -}}
+			<div id="content">
+				{{- block "main" . }}{{- end }}
+			</div>
+			{{- partial "footer.html" . -}}
+		</div>
+	</body>
+</html>

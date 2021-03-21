@@ -3,9 +3,9 @@ title: "About"
 description: "このサイトについて"
 draft: false
 fixed: true
-subtitle: ""
+subtitle: "About"
 ---
 
-このサイトはDigが適当にもの書いたり,
-作ったもの貼ったりする予定の場所です。
+このサイトはkunugiが適当に書いたり,
+作ったものを貼ったりする予定の場所です。
 基本的にはHugoの勉強とHTML,CSSを思い出すために作ったものなのでクオリティには触れないでもらえると助かります。

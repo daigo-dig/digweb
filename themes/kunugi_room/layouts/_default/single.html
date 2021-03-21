@@ -1,0 +1,56 @@
+{{ define "main" }}
+{{ with .Params.subtitle }}
+<div id="subtitle">
+	{{ . }}
+</div>
+{{ end }}
+
+<div id="content">
+	<div id="article" class="window">
+		<div class=windowTitle>
+			<a href={{.Permalink}} class=gray>
+				<h1>{{.Title}}</h1>
+			</a>
+			<p id="articleDate">{{.PublishDate.Format "2006/01/02"}}</p>
+		</div>
+
+		<div class=windowBody>
+			{{.Content}}
+		</div>
+		{{with .Params.categories}}
+			{{$tags := (slice)}}
+			{{range $elem := $.Params.tags}}
+			{{$tags = $tags | append (printf "<a class=altacolor href=%stags/%s/>%s</a>" $.Site.BaseURL (lower $elem) $elem)}}
+			{{end}}
+
+			{{$categories := (slice)}}
+			{{range $elem := $.Params.categories}}
+			{{$categories = $categories| append (printf "<a class=altacolor href=%scategories/%s/>%s</a>" $.Site.BaseURL (lower $elem) $elem)}}
+			{{end}}
+
+			<div id="articleTag">
+				カテゴリ: {{delimit $categories ", "}}
+				タグ: {{delimit $tags ", "}}
+			</div>
+		{{end}}
+	</div>
+</div>
+
+<div id=sidenavi>
+	<div id=naviprev>
+		{{ with .PrevInSection }}
+		<a href="{{ .Permalink }}">前の記事</a>
+		{{ end }}
+	</div>
+
+	<div id=navinext>
+		{{ with .NextInSection }}
+		<a href="{{ .Permalink }}">次の記事</a>
+		{{ end }}
+	</div>
+</div>
+
+
+
+{{ end }}
+
