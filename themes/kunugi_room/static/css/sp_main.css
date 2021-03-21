@@ -221,10 +221,8 @@ body {
 }
 
 .smallList {
-	width: 30%;
-	min-width: 300px;
+	width: 100%;
 	border: 2px solid #8FBACC;
-	flex: 1;
 	margin: 10px;
 	background-color: #B1DCD3;
 	background-size: 80px 80px;
@@ -239,8 +237,8 @@ body {
 	background-color: #EBEBEB;
 	height: 46px;
 	margin-left: 30px;
-	font-size:25px;
 	padding: 0 30px;
 	font-weight: 600;
+	font-size: 5vw;
 }
 
