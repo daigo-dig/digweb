@@ -70,6 +70,25 @@ a:hover {
 	text-decoration: none !important;
 }
 
+.windowthumbnail {
+	background: #EBEBEB;
+	color: #8FBACC;
+    border-radius: 10px 10px 0 0;
+	overflow: hidden;
+}
+
+.thumbnail {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.mid_windowTitle {
+	background: #EBEBEB;
+	color: #8FBACC;
+	padding: 10px;
+}
+
 .windowTitle {
 	background: #EBEBEB;
 	color: #8FBACC;

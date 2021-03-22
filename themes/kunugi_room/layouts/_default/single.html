@@ -33,6 +33,22 @@
 				タグ: {{delimit $tags ", "}}
 			</div>
 		{{end}}
+		{{with .Params.works_categories}}
+			{{$works_tags := (slice)}}
+			{{range $elem := $.Params.works_tags}}
+			{{$works_tags = $works_tags | append (printf "<a class=altacolor href=%sworks_tags/%s/>%s</a>" $.Site.BaseURL (lower $elem) $elem)}}
+			{{end}}
+
+			{{$works_categories := (slice)}}
+			{{range $elem := $.Params.works_categories}}
+			{{$works_categories = $works_categories| append (printf "<a class=altacolor href=%sworks_categories/%s/>%s</a>" $.Site.BaseURL (lower $elem) $elem)}}
+			{{end}}
+
+			<div id="articleTag">
+				カテゴリ: {{delimit $works_categories ", "}}
+				タグ: {{delimit $works_tags ", "}}
+			</div>
+		{{end}}
 	</div>
 </div>
 
